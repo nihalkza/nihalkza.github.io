@@ -1,17 +1,11 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-
-<html>
     <head>
-        <title>Abhishek Project List</title>
-        <style>@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Abhishek Project List</title>
+      <style>@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
 
 * {font-family: 'Open Sans', sans-serif;}
 
@@ -85,6 +79,10 @@
   .rwd-table tr:nth-child(2) {
     border-top: none;
   }
+
+  .copyright{
+    position: relative !important;
+  }
 }
 @media screen and (min-width: 600px) {
   .rwd-table tr:hover:not(:first-child) {
@@ -112,7 +110,6 @@
   }
 }
 
-
 /* THE END OF THE IMPORTANT STUFF */
 
 /* Basic Styling */
@@ -128,6 +125,7 @@ h1 {
 }
 .container {
   display: block;
+  height: 95vh;
   text-align: center;
 }
 h3 {
@@ -140,14 +138,14 @@ h3 {
 h3:before {
   content: "\25C0";
   position: absolute;
-  left: -50px;
+  left: -20px;
   -webkit-animation: leftRight 2s linear infinite;
   animation: leftRight 2s linear infinite;
 }
 h3:after {
   content: "\25b6";
   position: absolute;
-  right: -50px;
+  right: -20px;
   -webkit-animation: leftRight 2s linear infinite reverse;
   animation: leftRight 2s linear infinite reverse;
 }
@@ -162,6 +160,29 @@ h3:after {
   25%   { transform: translateX(-10px)}
   75%   { transform: translateX(10px)}
   100%  { transform: translateX(0)}
+}
+
+.abhiPic {
+    opacity: 1;
+    display: block;
+    position: absolute;
+    background: no-repeat url(abhi.png) 50% 100%;
+    background-size: 90%;
+    height: 100%;
+    width: 50%;
+    bottom: 0 !important;
+    right: 0;
+    z-index: -1;
+}
+footer {
+  position: relative;
+}
+
+.copyright {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom:0 !important;
 }
 </style>
     </head>
@@ -235,18 +256,23 @@ h3:after {
     </tbody>
   </table>
   <h3>New projects will uploaded soon...</h3>
-</div><center>      
-      <small>
-        <div style="position:absolute; bottom:0; width:99%;">
-          &copy; Abhishek</small><br/>
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-        
-            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
-        <br />
-        <p style="color:#fff;">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="text-decoration:none; color:#fff;"><h2>Creative Commons Attribution 4.0 International License</h2></a>
-        </div>
-  </body>
-</html>
-
+  <footer>
+  <div class="copyright">
+    <small>
+        &copy; Abhishek
+    </small>
+    <br>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+    </a>
+    <br />
+    <p style="color:#fff;">This work is licensed under a
+    <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/" style="text-decoration:none; color:#fff;">
+      <h2>Creative Commons Attribution 4.0 International License</h2>
+    </a>
+  </div>
+  </footer>
+</div>
+<div class="abhiPic"></div>
 </body>
 </html>
